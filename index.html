@@ -1,111 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Robotics Team</title>
-  <style>
-    body { margin:0; font-family:Arial,sans-serif; }
-    .topbar { background:navy; color:white; padding:1rem; display:flex; justify-content:space-between; }
-    .topbar a { color:white; margin:0 1rem; text-decoration:none; font-weight:bold; }
-    header { text-align:center; padding:2rem; background:#f4f4f4; }
-    .team-images img { width:150px; height:150px; margin:0.5rem; border-radius:8px; object-fit:cover; }
-    .section { padding:2rem; }
-    .events a { display:inline-block; margin:0.5rem; padding:0.5rem 1rem; background:navy; color:white; border-radius:4px; text-decoration:none; }
-    footer { background:navy; color:white; text-align:center; padding:1.5rem; }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <script>
-    function createTopbar() {
-      const topbar = document.createElement("div");
-      topbar.className = "topbar";
+  <div id="topbar"></div>
+  <button id="themeToggle">Toggle Theme</button>
+  <header id="main-header"></header>
+  <section id="section1"></section>
+  <section id="section2"></section>
+  <footer id="main-footer"></footer>
 
-      const logo = document.createElement("div");
-      logo.textContent = "Robotics Team";
-
-      const nav = document.createElement("nav");
-      ["Home", "About", "Our Events", "Archive", "Social", "More"].forEach(tab => {
-        const link = document.createElement("a");
-        link.href = "#";
-        link.textContent = tab;
-        nav.appendChild(link);
-      });
-
-      topbar.appendChild(logo);
-      topbar.appendChild(nav);
-      document.body.appendChild(topbar);
-    }
-
-    function createHeader() {
-      const header = document.createElement("header");
-      const h1 = document.createElement("h1");
-      h1.textContent = "Welcome to Our Robotics Team";
-      header.appendChild(h1);
-
-      const teamImages = document.createElement("div");
-      teamImages.className = "team-images";
-      ["https://via.placeholder.com/150", "https://via.placeholder.com/150", "https://via.placeholder.com/150"].forEach(src => {
-        const img = document.createElement("img");
-        img.src = src;
-        teamImages.appendChild(img);
-      });
-
-      header.appendChild(teamImages);
-      document.body.appendChild(header);
-    }
-
-    function createSection1() {
-      const section = document.createElement("section");
-      section.className = "section";
-      section.innerHTML = `
-        <h2>What We Do</h2>
-        <p>Our robotics team is dedicated to innovation, teamwork, and problem-solving. 
-        We design, build, and program robots to compete in exciting competitions.</p>
-        <div class="events">
-          <a href="https://www.bestrobotics.org" target="_blank">BEST Robotics</a>
-          <a href="https://www.firstinspires.org/robotics/frc" target="_blank">FRC Robotics</a>
-        </div>
-      `;
-      document.body.appendChild(section);
-    }
-
-    function createSection2() {
-      const section = document.createElement("section");
-      section.className = "section";
-      section.innerHTML = `
-        <h2>Watch Our Team in Action</h2>
-        <div style="text-align:center;">
-          <iframe width="560" height="315" 
-            src="https://www.youtube.com/embed/VIDEO_ID" 
-            frameborder="0" allowfullscreen></iframe>
-        </div>
-      `;
-      document.body.appendChild(section);
-    }
-
-    function createFooter() {
-      const footer = document.createElement("footer");
-      footer.innerHTML = `
-        <p>
-          Robot Wranglers<br>
-          Legacy Ranch HS<br>
-          450 County Road 258 | Liberty Hill, TX 78642<br>
-          Phone: (512) 379-3290<br>
-          Lead Mentor: <a href="mailto:" style="color:white;">Email</a> | <a href="tel:" style="color:white;">Phone</a>
-        </p>
-        <p>&copy; 2025 Robot Wranglers</p>
-      `;
-      document.body.appendChild(footer);
-    }
-
-    // Initialize page
-    createTopbar();
-    createHeader();
-    createSection1();
-    createSection2();
-    createFooter();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
 
