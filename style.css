@@ -3,6 +3,7 @@ body {
   font-family: 'Bank Gothic Medium BT', Arial, sans-serif;
   background-color: #95c8e3;
   color: #0a2a4e;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .dark-theme {
@@ -13,6 +14,7 @@ body {
 .topbar, footer {
   background-color: #0a2a4e;
   color: white;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .dark-theme .topbar,
@@ -38,6 +40,7 @@ header {
   text-align: center;
   padding: 2rem;
   background: #e0f0fa;
+  transition: background 0.5s ease;
 }
 
 .dark-theme header {
@@ -64,6 +67,7 @@ header {
   color: white;
   border-radius: 4px;
   text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .dark-theme .events a {
@@ -75,4 +79,3 @@ footer {
   text-align: center;
   padding: 1.5rem;
 }
-
