@@ -1,1 +1,79 @@
+<style>
+  body {
+    margin: 0;
+    font-family: 'Bank Gothic Medium BT', Arial, sans-serif;
+    background-color: #95c8e3; /* Light theme default */
+    color: #0a2a4e;
+  }
+
+  .dark-theme {
+    background-color: #0a2a4e;
+    color: #95c8e3;
+  }
+
+  .topbar, footer {
+    background-color: #0a2a4e;
+    color: white;
+  }
+
+  .dark-theme .topbar, .dark-theme footer {
+    background-color: #95c8e3;
+    color: #0a2a4e;
+  }
+
+  .topbar {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .topbar a {
+    color: inherit;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  header {
+    text-align: center;
+    padding: 2rem;
+    background: #e0f0fa;
+  }
+
+  .dark-theme header {
+    background: #143b60;
+  }
+
+  .team-images img {
+    width: 150px;
+    height: 150px;
+    margin: 0.5rem;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .section {
+    padding: 2rem;
+  }
+
+  .events a {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #0a2a4e;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+  .dark-theme .events a {
+    background: #95c8e3;
+    color: #0a2a4e;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+  }
+</style>
 
