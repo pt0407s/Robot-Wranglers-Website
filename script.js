@@ -6,10 +6,19 @@ function createTopbar() {
   logo.textContent = "Robotics Team";
 
   const nav = document.createElement("nav");
-  ["Home", "About", "Our Events", "Archive", "Social", "More"].forEach(tab => {
+  const pages = {
+    Home: "index.html",
+    About: "about.html",
+    "Our Events": "events.html",
+    Archive: "archive.html",
+    Social: "social.html",
+    More: "more.html"
+  };
+
+  Object.entries(pages).forEach(([label, url]) => {
     const link = document.createElement("a");
-    link.href = "#";
-    link.textContent = tab;
+    link.href = url;
+    link.textContent = label;
     nav.appendChild(link);
   });
 
@@ -17,8 +26,24 @@ function createTopbar() {
   topbar.appendChild(nav);
 }
 
+function createFooter() {
+  const footer = document.getElementById("main-footer");
+  footer.innerHTML = `
+    <p>
+      Robot Wranglers<br>
+      Legacy Ranch HS<br>
+      450 County Road 258 | Liberty Hill, TX 78642<br>
+      Phone: (512) 379-3290<br>
+      Lead Mentor: <a href="mailto:" style="color:white;">Email</a> | <a href="tel:" style="color:white;">Phone</a>
+    </p>
+    <p>&copy; 2025 Robot Wranglers</p>
+  `;
+}
+
 function createHeader() {
   const header = document.getElementById("main-header");
+  if (!header) return;
+
   const h1 = document.createElement("h1");
   h1.textContent = "Welcome to Our Robotics Team";
   header.appendChild(h1);
@@ -36,6 +61,8 @@ function createHeader() {
 
 function createSection1() {
   const section = document.getElementById("section1");
+  if (!section) return;
+
   section.className = "section";
   section.innerHTML = `
     <h2>What We Do</h2>
@@ -50,6 +77,8 @@ function createSection1() {
 
 function createSection2() {
   const section = document.getElementById("section2");
+  if (!section) return;
+
   section.className = "section";
   section.innerHTML = `
     <h2>Watch Our Team in Action</h2>
@@ -61,24 +90,19 @@ function createSection2() {
   `;
 }
 
-function createFooter() {
-  const footer = document.getElementById("main-footer");
-  footer.innerHTML = `
-    <p>
-      Robot Wranglers<br>
-      Legacy Ranch HS<br>
-      450 County Road 258 | Liberty Hill, TX 78642<br>
-      Phone: (512) 379-3290<br>
-      Lead Mentor: <a href="mailto:" style="color:white;">Email</a> | <a href="tel:" style="color:white;">Phone</a>
-    </p>
-    <p>&copy; 2025 Robot Wranglers</p>
-  `;
+function setupThemeToggle() {
+  const toggleBtn = document.getElementById("themeToggle");
+  if (!toggleBtn) return;
+
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-theme");
+  });
 }
 
-// Initialize page
+// Initialize
 createTopbar();
+createFooter();
 createHeader();
 createSection1();
 createSection2();
-createFooter();
-
+setupThemeToggle();
