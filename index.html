@@ -17,76 +17,94 @@
 </head>
 <body>
   <script>
-    // --- Topbar ---
-    const topbar = document.createElement("div");
-    topbar.className = "topbar";
-    const logo = document.createElement("div");
-    logo.textContent = "Robotics Team";
-    const nav = document.createElement("nav");
-    ["Home","About","Our Events","Archive","Social","More"].forEach(tab=>{
-      const link = document.createElement("a");
-      link.href="#";
-      link.textContent=tab;
-      nav.appendChild(link);
-    });
-    topbar.appendChild(logo);
-    topbar.appendChild(nav);
-    document.body.appendChild(topbar);
+    function createTopbar() {
+      const topbar = document.createElement("div");
+      topbar.className = "topbar";
 
-    // --- Header ---
-    const header = document.createElement("header");
-    const h1 = document.createElement("h1");
-    h1.textContent = "Welcome to Our Robotics Team";
-    header.appendChild(h1);
-    const teamImages = document.createElement("div");
-    teamImages.className = "team-images";
-    ["https://via.placeholder.com/150","https://via.placeholder.com/150","https://via.placeholder.com/150"].forEach(src=>{
-      const img = document.createElement("img");
-      img.src = src;
-      teamImages.appendChild(img);
-    });
-    header.appendChild(teamImages);
-    document.body.appendChild(header);
+      const logo = document.createElement("div");
+      logo.textContent = "Robotics Team";
 
-    // --- Section 1 ---
-    const section1 = document.createElement("section");
-    section1.className = "section";
-    section1.innerHTML = `
-      <h2>What We Do</h2>
-      <p>Our robotics team is dedicated to innovation, teamwork, and problem-solving. 
-      We design, build, and program robots to compete in exciting competitions.</p>
-      <div class="events">
-        <a href="https://www.bestrobotics.org" target="_blank">BEST Robotics</a>
-        <a href="https://www.firstinspires.org/robotics/frc" target="_blank">FRC Robotics</a>
-      </div>
-    `;
-    document.body.appendChild(section1);
+      const nav = document.createElement("nav");
+      ["Home", "About", "Our Events", "Archive", "Social", "More"].forEach(tab => {
+        const link = document.createElement("a");
+        link.href = "#";
+        link.textContent = tab;
+        nav.appendChild(link);
+      });
 
-    // --- Section 2 ---
-    const section2 = document.createElement("section");
-    section2.className = "section";
-    section2.innerHTML = `
-      <h2>Watch Our Team in Action</h2>
-      <div style="text-align:center;">
-        <iframe width="560" height="315" 
-          src="https://www.youtube.com/embed/VIDEO_ID" 
-          frameborder="0" allowfullscreen></iframe>
-      </div>
-    `;
-    document.body.appendChild(section2);
+      topbar.appendChild(logo);
+      topbar.appendChild(nav);
+      document.body.appendChild(topbar);
+    }
 
-    // --- Footer ---
-    const footer = document.createElement("footer");
-    footer.innerHTML = `
-      <p>
-        <a href="https://instagram.com/yourteam" target="_blank">Instagram</a> |
-        <a href="mailto:yourteam@email.com">Email</a> |
-        <a href="https://youtube.com/yourteam" target="_blank">YouTube</a> |
-        Contact: (123) 456-7890
-      </p>
-      <p>&copy; 2025 Robotics Team</p>
-    `;
-    document.body.appendChild(footer);
+    function createHeader() {
+      const header = document.createElement("header");
+      const h1 = document.createElement("h1");
+      h1.textContent = "Welcome to Our Robotics Team";
+      header.appendChild(h1);
+
+      const teamImages = document.createElement("div");
+      teamImages.className = "team-images";
+      ["https://via.placeholder.com/150", "https://via.placeholder.com/150", "https://via.placeholder.com/150"].forEach(src => {
+        const img = document.createElement("img");
+        img.src = src;
+        teamImages.appendChild(img);
+      });
+
+      header.appendChild(teamImages);
+      document.body.appendChild(header);
+    }
+
+    function createSection1() {
+      const section = document.createElement("section");
+      section.className = "section";
+      section.innerHTML = `
+        <h2>What We Do</h2>
+        <p>Our robotics team is dedicated to innovation, teamwork, and problem-solving. 
+        We design, build, and program robots to compete in exciting competitions.</p>
+        <div class="events">
+          <a href="https://www.bestrobotics.org" target="_blank">BEST Robotics</a>
+          <a href="https://www.firstinspires.org/robotics/frc" target="_blank">FRC Robotics</a>
+        </div>
+      `;
+      document.body.appendChild(section);
+    }
+
+    function createSection2() {
+      const section = document.createElement("section");
+      section.className = "section";
+      section.innerHTML = `
+        <h2>Watch Our Team in Action</h2>
+        <div style="text-align:center;">
+          <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/VIDEO_ID" 
+            frameborder="0" allowfullscreen></iframe>
+        </div>
+      `;
+      document.body.appendChild(section);
+    }
+
+    function createFooter() {
+      const footer = document.createElement("footer");
+      footer.innerHTML = `
+        <p>
+          Robot Wranglers<br>
+          Legacy Ranch HS<br>
+          450 County Road 258 | Liberty Hill, TX 78642<br>
+          Phone: (512) 379-3290<br>
+          Lead Mentor: <a href="mailto:" style="color:white;">Email</a> | <a href="tel:" style="color:white;">Phone</a>
+        </p>
+        <p>&copy; 2025 Robot Wranglers</p>
+      `;
+      document.body.appendChild(footer);
+    }
+
+    // Initialize page
+    createTopbar();
+    createHeader();
+    createSection1();
+    createSection2();
+    createFooter();
   </script>
 </body>
 </html>
