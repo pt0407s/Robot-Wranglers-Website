@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="More Information - Robot Wranglers Contact and Resources">
+    <title>More - Robot Wranglers</title>
+    <link rel="icon" type="image/png" href="../visuals/lrlogo.png">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="topbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo-section">
+                <img src="../visuals/lrlogo.png" alt="Robot Wranglers Logo" class="nav-logo" width="50" height="50">
+                <span class="team-name">Robot Wranglers</span>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="archive.html">Archive</a></li>
+                <li><a href="social.html">Social</a></li>
+                <li><a href="more.html" class="active">More</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon">🌓</span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>More Information</h1>
+                <p class="page-subtitle">Contact us and get involved</p>
+            </div>
+        </section>
+
+        <section class="content-section" id="contact">
+            <div class="container">
+                <h2 class="section-header">Contact Us</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">📧</div>
+                                <div class="method-details">
+                                    <h4>Email</h4>
+                                    <a href="mailto:dpaschal@libertyhill.txed.net">dpaschal@libertyhill.txed.net</a>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                            <div class="contact-method">
+                                <div class="method-icon">📍</div>
+                                <div class="method-details">
+                                    <h4>Location</h4>
+                                    <p>Legacy Ranch High School<br>450 County Road 258<br>Liberty Hill, TX 78642</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-container">
+                        <h3>Send a Message</h3>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="join">Join the Team</option>
+                                    <option value="sponsor">Sponsorship</option>
+                                    <option value="general">General Question</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                        <div id="formMessage" class="form-message"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Calendar Section -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2 class="section-header">Event Calendar</h2>
+                <div class="calendar-container">
+                    <div class="calendar-event">
+                        <div class="event-date">
+                            <span class="month">SEP</span>
+                            <span class="day">27</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Kickoff</h3>
+                            <p>Game reveal and season kickoff</p>
+                            <span class="event-location">📍 Legacy Ranch HS, Liberty Hill, TX</span>
+                        </div>
+                    </div>
+
+                    <div class="calendar-event">
+                        <div class="event-date">
+                            <span class="month">NOV</span>
+                            <span class="day">8</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Practice Day</h3>
+                            <p>Competition practice and preparation</p>
+                            <span class="event-location">📍 NYOS Charter School, Austin, TX</span>
+                        </div>
+                    </div>
+
+                    <div class="calendar-event">
+                        <div class="event-date">
+                            <span class="month">NOV</span>
+                            <span class="day">22</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Game Day</h3>
+                            <p>Official competition day</p>
+                            <span class="event-location">📍 Dripping Springs HS, Dripping Springs, TX</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2 class="section-header">Resources</h2>
+                <div class="resources-grid">
+                    <a href="https://www.bestrobotics.org/" target="_blank" class="resource-card">
+                        <h3>🤖 BEST Robotics</h3>
+                        <p>Official BEST Robotics website</p>
+                    </a>
+                    <a href="https://www.firstinspires.org/robotics/frc" target="_blank" class="resource-card">
+                        <h3>🏆 FIRST Robotics</h3>
+                        <p>Learn about FRC competitions</p>
+                    </a>
+                    <a href="events.html" class="resource-card">
+                        <h3>📅 Our Events</h3>
+                        <p>Competition information</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Robot Wranglers</h3>
+                <p>Legacy Ranch High School</p>
+                <p>450 County Road 258</p>
+                <p>Liberty Hill, TX 78642</p>
+            </div>
+            <div class="footer-section">
+                <h3>Lead Mentor</h3>
+                <p>Mr. Paschal</p>
+                <p>Email: <a href="mailto:dpaschal@libertyhill.txed.net">dpaschal@libertyhill.txed.net</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/lrhs.robotics/?hl=en" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon">📷</span> Instagram
+                    </a>
+                    <a href="mailto:dpaschal@libertyhill.txed.net">
+                        <span class="social-icon">✉️</span> Email
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Legacy Ranch High School Robot Wranglers. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
